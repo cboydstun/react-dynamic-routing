@@ -19,17 +19,17 @@ export default function CoffeeInfo() {
   useEffect(() => {
     fetchData();
     // console.log(params);
-    //console.log(ingredients);
+    // console.log(ingredients);
   }, []);
 
   return (
     <div>
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-
-      <p>Ingredients</p>
-      {ingredients.map((item) => (
-        <p>{item}</p>
+      <br />
+      <h4>Ingredients</h4>
+      {ingredients.map((ingredient) => (
+        <p key={ingredient} className="coffee-ingredients">{ingredient}</p>
       ))}
     </div>
   );

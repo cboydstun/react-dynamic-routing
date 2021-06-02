@@ -5,7 +5,7 @@ export default function Coffee() {
   const [data, setData] = useState([]);
   let params = useParams();
 
-  const fetchData = () => {
+  const fetchData = async () => {
     fetch(`https://api.sampleapis.com/coffee/${params.type}`)
       .then((data) => data.json())
       .then((data) => {
@@ -17,7 +17,7 @@ export default function Coffee() {
   useEffect(() => {
     fetchData();
     // console.log(params);
-  }, []);
+  });
 
   return (
     <div>

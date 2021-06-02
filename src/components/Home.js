@@ -11,7 +11,7 @@ export default function Home() {
                 <Link to={"/coffee/hot"}>Hot Coffees</Link>
                 </li>
                 <li>
-                <Link to="/coffee/iced">Cold coffees</Link>
+                <Link to={"/coffee/iced"}>Cold coffees</Link>
                 </li>
             </ul>
         </div>
