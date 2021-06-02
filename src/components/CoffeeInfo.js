@@ -10,7 +10,7 @@ export default function CoffeeInfo() {
     fetch(`https://api.sampleapis.com/coffee/${params.type}/${params.id}`)
       .then((data) => data.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
         setIngredients(data.ingredients);
       });
@@ -18,7 +18,7 @@ export default function CoffeeInfo() {
 
   useEffect(() => {
     fetchData();
-    console.log(params);
+    // console.log(params);
     //console.log(ingredients);
   }, []);
 
@@ -27,7 +27,7 @@ export default function CoffeeInfo() {
       <h1>{data.title}</h1>
       <p>{data.description}</p>
 
-      <p>ingredients</p>
+      <p>Ingredients</p>
       {ingredients.map((item) => (
         <p>{item}</p>
       ))}

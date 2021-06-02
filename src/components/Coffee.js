@@ -9,14 +9,14 @@ export default function Coffee() {
     fetch(`https://api.sampleapis.com/coffee/${params.type}`)
       .then((data) => data.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   };
 
   useEffect(() => {
     fetchData();
-    console.log(params);
+    // console.log(params);
   }, []);
 
   return (
